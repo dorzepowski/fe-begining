@@ -1,0 +1,15 @@
+{
+  "name": "fe-begining",
+  "version": "1.0.0",
+  "description": "Presentation for very begining frontend developer",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "//github.com/dorzepowski/fe-begining"
+  },
+  "author": "Damian Orzepowski <info@softwarelab.com.pl>",
+  "license": "WTFPL"
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="fe"  lang="pl">
+<html ng-app="fe" lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<title>Angular App</title>
@@ -9,6 +9,11 @@
 	<base href="/">
 </head>
 <body ng-controller="AppController as app">
-
+<div class="main slides container" ui-view></div>
+<div class="$state debug">
+	<pre>
+		state = {{st.current.name}}
+	</pre>
+</div>
 </body>
 </html>

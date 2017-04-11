@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercises</title>
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		  crossorigin="anonymous">
+	<link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+	<style>
+		when {
+			display: block;
+			font-size: 16px;
+			font-weight: 700;
+
+		}
+
+		when:before {
+			content: "When: "
+		}
+
+		then {
+			display: block;
+			font-size: 16px;
+			font-weight: 700;
+			color: orangered;
+		}
+
+		then:before {
+			content: "Then: "
+		}
+
+		.story {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-style: oblique;
+			color: indigo;
+		}
+
+		section {
+			border-bottom: solid 1px green;
+		}
+
+		section h3 {
+			color: green;
+		}
+
+		section h3:before {
+			content: "\f10a";
+			font-family: "Ionicons";
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 0 3px;
+		}
+
+		section.open h3:before {
+			content: "\f104";
+			padding: 0;
+		}
+
+		section.open .ex-content {
+			padding-top: 8px;
+			padding-left: 33px;
+			max-height: 700px;
+			-webkit-transition: max-height 0.8s ease-in-out;
+			-moz-transition: max-height 0.8s ease-in-out;
+			-o-transition: max-height 0.8s ease-in-out;
+			transition: max-height 0.8s ease-in;
+		}
+
+		section .ex-content {
+			max-height: 0;
+			min-height: 0;
+			padding-top: 0;
+			padding-bottom: 0;
+			margin-bottom: 0;
+			overflow-y: hidden;
+			-webkit-transition: max-height 0.8s ease-in-out;
+			-moz-transition: max-height 0.8s ease-in-out;
+			-o-transition: max-height 0.8s ease-in-out;
+			transition: max-height 0.8s ease-out;
+		}
+
+		section.open .ex-content ul {
+			padding-left: 16px;
+		}
+	</style>
+</head>
+<body>
+<section id="0a">
+	<ul>
+		<li>Zainstaluj <a
+				href="https://nodejs.org/dist/latest-v6.x/node-v6.10.2-x64.msi">NodeJs </a></li>
+		<li>Zainstaluj <a href="https://go.microsoft.com/fwlink/?LinkID=623230">Visual Studio
+			Code</a></li>
+		<li>Otwórz konsolę i w folderze fe-begining wpisz <code class="code">npm install</code></li>
+		<li>Otwórz <a href="?ex=0b">stronę z zadaniami</a></li>
+	</ul>
+</section>
+<section id="0b">
+	<ul>
+		<li>Otwórz plik fe-begining/exercises/1/index.html w Visual Studio Code</li>
+		<li>W sekcji &lt;script&gt; wpisz <code class="code">alert("Hello World")</code></li>
+		<li>Otwórz <a href="/0/"> stronę z ćwiczeniem 1</a> i zobacz co się
+			stało
+		</li>
+	</ul>
+</section>
+<section id="1a">
+	<pre class="panel panel-success story">
+Twój zespół dostał zlecenie na przygotowanie aplikacji.
+Ogólnie aplikacja ma służyć jako forma "korespondencji seryjnej"
+Dokładniejsze wymagani będą gromadzone na bierząco a ich implementacja należy do waszego
+zespołu
+	</pre>
+	<when> Użytkownik wpisuje treść w text area</when>
+	<when> Użytkownik klika przycisk</when>
+	<then> Wiadomość wypisuje się pod formularzem</then>
+</section>
+<section id="1b">
+	<when> Użytkownik wpisuje treść ze znacznikiem do podmienienia (powiedzmy $1)</when>
+	<when> Wpisuje w input wartość podmieniajacą</when>
+	<then> Wiadomość wypisuje się z podmieniona wartością</then>
+</section>
+<section id="2a">
+	<when> Użytkownik wpisuje tekst zawierający 2 takie same znaczniki</when>
+	<then> tekst wypisuje się z podmienionymi oboma znacznikami</then>
+</section>
+<section id="2b">
+	<when> użytkownik wpisuje tekst zawierający 2 różne znaczniki (#1, #2)</when>
+	<when> Wpisuje w input po przecinku dwie wartości</when>
+	<then> Tekst wypisuje się z obiema wartościami podmienionymi</then>
+</section>
+<section id="3">
+	<when> użytkownik wpisuje tekst zawierający 1 znacznik</when>
+	<when> nie uzupełnia inputu</when>
+	<then> wypisuje tekst bez znacznika</then>
+</section>
+<section id="4">
+	<when> użytkownik wpisuje tekst z dwoma znacznikami</when>
+	<when> wypełnia input tylko jedna wartością</when>
+	<then> wypisuje tekst z zastapionym pierwszym znacznikiem i bez drugiego znacznika</then>
+</section>
+<section id="5">
+	<when> użytkownik klika przycisk dodaj</when>
+	<then> pojawia się drugi input</then>
+	<when> Wpisuje tekst bez znacznika</when>
+	<when> klika submit</when>
+	<then> tekst przepisuje się 2 razy</then>
+</section>
+<section id="6">
+	<when> użytkownik wpisuje tekst zawierający 1 znacznik</when>
+	<when> uzupełnia input wartością</when>
+	<when> klika przycisk dodaj</when>
+	<when> uzupełnia drugi input</when>
+	<then> pojawiają się 2 teksty z zastapionym znacznikiem z odpowiadającą wartością</then>
+</section>
+<section id="7">
+	<when> użytkownik wpisuje tekst zawierający 2 znacznik</when>
+	<when> uzupełnia input wartością</when>
+	<when> klika przycisk dodaj</when>
+	<when> uzupełnia drugi input</when>
+	<then> pojawiają się 2 teksty z zastapionym znacznikiem z odpowiadającymi wartościami</then>
+</section>
+<section id="8">
+		<pre class="panel panel-success story">
+Okazało się, że użytkownicy przepisywali ręcznie dane z bazy danych.
+Osoby odpowiedzialne za część backendową przygotowały i wystawiły RESTowy endpoint z danymi odbiorców z bazy danych
+Należy zmienić aplikację by wykorzystywała te dane. Zmian dokonać na podstawie zebranych wymagań.
+	</pre>
+	<when> użytkownik uzupełnia treść bez znacznika</when>
+	<then> wypisuje tę samą treść tyle razy ile danych zostanie pobranych</then>
+</section>
+<section id="9">
+	<when> użytkownik uzupełnia treść z 1 znacznikiem #name</when>
+	<then> wypisuje teskt z zamienionym znacznikiem na imię z pobranych danych</then>
+</section>
+<section id="10">
+	<when> użytkownik uzupełnia treść z 2 znacznikami #name i #surename</when>
+	<then> wypisuje tekst z zamienionymi znacznikami na odpowiednie imię i nazwisko pobrane z danych</then>
+</section>
+<section id="11"></section>
+<section id="12"></section>
+</body>
+<script src="//code.jquery.com/jquery-3.2.1.js"
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+		crossorigin="anonymous"></script>
+<script>
+	(function ($) {
+		var app = new App();
+		$(document).ready(app.bootstrap);
+
+
+		function App() {
+			var $this = this;
+			$this.bootstrap = bootstrap;
+
+
+			function bootstrap() {
+				configureSections();
+				openSelectedExercise();
+
+			}
+
+			function configureSections() {
+				var sections = $("section");
+				sections
+
+					.each(function () {
+						var content = $(this).children();
+						var wrapper = $("<div class='ex-content well'>");
+						wrapper.append(content).appendTo(this);
+					})
+					.each(function () {
+						var sectionHeader = $("<h3>").text("Ex " + this.id).click(function () {
+							$(this).parent().toggleClass("open");
+						});
+						$(this).prepend(sectionHeader);
+					})
+
+			}
+
+			function openSelectedExercise() {
+				var pageUrl = new URL(location.href);
+				var exerciseNum = pageUrl.searchParams.get("ex");
+				if (exerciseNum) {
+					showExercise(exerciseNum);
+				}
+			}
+
+
+			function showExercise(exerciseNum) {
+				$("section#" + exerciseNum).addClass("open")
+			}
+
+		}
+
+
+	})(jQuery);
+</script>
+</html>
